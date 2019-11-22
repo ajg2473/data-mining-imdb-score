@@ -5,13 +5,13 @@ from decimal import Decimal
 def getHighestActorRating(actor_likes_list):
     likes = max(actor_likes_list)
 
-    if likes <= 7700:
+    if likes <= 500:
         return 'F'
-    elif likes > 7700 and likes <= 15400:
+    elif likes > 500 and likes <= 800:
         return 'D'
-    elif likes > 15400 and likes <= 23100:
+    elif likes > 800 and likes <= 8000:
         return 'C'
-    elif likes > 23100 and likes <= 30800:
+    elif likes > 8000 and likes <= 15000:
         return 'B'
     else:
         return 'A'
@@ -103,30 +103,6 @@ def getGenre(data):
 		genre = data[0]
 	return genre
 
-# Pick which genre comes first...
-
-# def getGenre(data):
-# 	genre = ''
-# 	if "Action" in data or "Adventure" in data or "Western" in data:
-# 		genre = "Action"
-# 	elif "Comedy" in data or "Romance" in data:
-# 		genre = "Comedy"
-# 	elif "Documentary" in data or "Biography" in data or "History" in data: 
-# 		genre = "Documentary"
-# 	elif "Drama" in data:
-# 		genre = "Drama"
-# 	elif "Family" in data or "Animation" in data or "Fantasy" in data or "Music" in data or "Musical" in data:
-# 		genre = "Family"
-# 	elif "Horror" in data:
-# 		genre = "Horror"
-# 	elif "Sci-Fi" in data:
-# 		genre = "Sci-Fi"
-# 	elif "Thriller" in data or "Crime" in data:
-# 		genre = "Thriller"
-# 	else:
-# 		genre = data
-# 	return genre
-
 def budget(num):
     discBudget = ''
     # Less than 12 million dollars budget
@@ -158,7 +134,7 @@ def readCSVFile(fileName):
     fileCSV = open(fileName, 'r')
     line = fileCSV.readline().strip()
     flag = True
-    counter = 0
+    
     while line:
         # Skip the first row from excel [color, director_name, num_critic_for_reviews, duration, etc...]
         if flag:
