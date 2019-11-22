@@ -103,7 +103,6 @@ def getGenre(data):
 		genre = data[0]
 	return genre
 
-
 def budget(num):
     discBudget = ''
     # Less than 12 million dollars budget
